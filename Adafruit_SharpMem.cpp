@@ -185,7 +185,7 @@ void Adafruit_SharpMem::drawPixel(int16_t x, int16_t y, uint16_t color)
 
   switch(rotation) {
    case 1:
-    swap(x, y);
+    _swap_int16_t(x, y);
     x = WIDTH  - 1 - x;
     break;
    case 2:
@@ -193,7 +193,7 @@ void Adafruit_SharpMem::drawPixel(int16_t x, int16_t y, uint16_t color)
     y = HEIGHT - 1 - y;
     break;
    case 3:
-    swap(x, y);
+    _swap_int16_t(x, y);
     y = HEIGHT - 1 - y;
     break;
   }
@@ -226,7 +226,7 @@ uint8_t Adafruit_SharpMem::getPixel(uint16_t x, uint16_t y)
 
   switch(rotation) {
    case 1:
-    swap(x, y);
+    _swap_uint16_t(x, y);
     x = WIDTH  - 1 - x;
     break;
    case 2:
@@ -234,7 +234,7 @@ uint8_t Adafruit_SharpMem::getPixel(uint16_t x, uint16_t y)
     y = HEIGHT - 1 - y;
     break;
    case 3:
-    swap(x, y);
+    _swap_uint16_t(x, y);
     y = HEIGHT - 1 - y;
     break;
   }
